@@ -1,9 +1,13 @@
-# My_100_Codes
+print("Tip Calculator")
 
-Hi all
-My name is Amrith D Pillai
+bill = float (input ("What was the total bill? $"))
 
-This repository is created to save all the work that I am doing while I am pursuing my course on becoming a python programmer.
-Hope this helps someone else who is on a similar journey.
+tip = int (input("What percentage tip would you like to give? 10, 12 or 15? "))
 
-Thank you!
+no = int (input("How many people to split the bill? "))
+
+tip_percent = tip/100 
+
+each = round(((bill/no)*(1+tip_percent)),2)
+
+print (f"Each person should pay: ${each}")
