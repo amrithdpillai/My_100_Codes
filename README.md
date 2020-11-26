@@ -1,9 +1,55 @@
-# My_100_Codes
+import random
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
 
-Hi all
-My name is Amrith D Pillai
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
 
-This repository is created to save all the work that I am doing while I am pursuing my course on becoming a python programmer.
-Hope this helps someone else who is on a similar journey.
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
 
-Thank you!
+print ("Welcome to Rock, Paper, Scissors!!!")
+a = int(input("\nMake your choice. Type 0 for rock, 1 for paper or 2 for scissors.\n"))
+
+if a == 0:
+  print(rock)
+elif a == 1:
+  print(paper)
+elif a == 2:
+  print(scissors)
+else:
+  print ("you made an incorrect choice")
+
+b = random.randint(0,2)
+print ("computer chose:")
+if b == 0:
+  print(rock)
+elif b == 1:
+  print(paper)
+elif b == 2:
+  print(scissors)
+
+if (a==0 and b==2) or (a==1 and b==0) or (a==2 and b==1):
+  print("\nYou Win")
+elif (a==b):
+  print("\nDraw")
+else:
+  print("\nYou Lose")
